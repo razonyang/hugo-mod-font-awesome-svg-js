@@ -62,8 +62,12 @@ export default icons;
 Please note that you SHOULD not import the icons as follows.
 
 ```js
-import { faTimeline } from 'js/font-awesome/free-solid-svg-icons'; // It'll increase the bundle size which is unexpected.
-// import { faTimeline } from 'js/font-awesome/free-solid-svg-icons/faTimeline'; // Use this instead.
+// It'll import all the icons, which causes the bundle size become extreme large, even you've specified the icon.
+// This behavior is weird, it works fine with `node_modules`, but doesn't work with Hugo module.
+import { faTimeline } from 'js/font-awesome/free-solid-svg-icons';
+
+// Use following instead.
+import { faTimeline } from 'js/font-awesome/free-solid-svg-icons/faTimeline';
 ```
 
 ### Load Script
