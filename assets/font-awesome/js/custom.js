@@ -1,0 +1,2 @@
+// SAME AS icons.js, BUT RESERVED FOR USERS NOT THEME DEVELOPERS.
+export default [];

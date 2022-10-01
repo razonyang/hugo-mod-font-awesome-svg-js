@@ -1,0 +1,14 @@
+{{/* Load main JavaScript. */}}
+{{- $js := resources.Get "font-awesome/js/index.js" }}
+{{- $sourceMap := cond hugo.IsProduction "" "inline" }}
+{{- $opts := dict
+  "sourceMap" $sourceMap
+  "minify" hugo.IsProduction
+  "targetPath" "js/font-awesome.js"
+}}
+{{/* Compile JS. */}}
+{{- $js = $js | js.Build $opts }}
+{{- if hugo.IsProduction }}
+  {{- $js = $js | fingerprint }}
+{{- end }}
+{{- return $js }}

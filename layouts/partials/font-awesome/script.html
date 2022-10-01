@@ -1,0 +1,6 @@
+{{- $js := partial "font-awesome/script-resource" . }}
+<script
+  src="{{ $js.RelPermalink }}"
+  {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}
+  defer
+></script>

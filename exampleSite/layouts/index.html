@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>{{ .Title }}</title>
+    <style>
+      th,
+      td {
+        padding: 0.5rem;
+        text-align: center;
+        border: 1px solid gray;
+      }
+
+      code {
+        background: gray;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        user-select: all;
+      }
+    </style>
+    {{- partial "font-awesome/script" . }}
+  </head>
+  <body>
+    <h1>
+      <a href="https://github.com/razonyang/hugo-mod-font-awesome-svg-js"
+        >{{ .Title }}</a
+      >
+    </h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Preview</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>{{ print "<i class=\"far fa-file\"></i>" | html }}</code>
+          </td>
+          <td><i class="far fa-file"></i></td>
+        </tr>
+        <tr>
+          <td>
+            <code>{{ print "<i class=\"fas fa-terminal\"></i>" | html }}</code>
+          </td>
+          <td><i class="fas fa-terminal"></i></td>
+        </tr>
+        <tr>
+          <td>
+            <code>{{ print "<i class=\"fas fa-timeline\"></i>" | html }}</code>
+          </td>
+          <td><i class="fas fa-timeline"></i></td>
+        </tr>
+        <tr>
+          <td>
+            <code>{{ print "<i class=\"fab fa-github\"></i>" | html }}</code>
+          </td>
+          <td><i class="fab fa-github"></i></td>
+        </tr>
+        <tr>
+          <td>
+            <code>{{ print "<i class=\"fab fa-invalid\"></i>" | html }}</code>
+          </td>
+          <td><i class="fab fa-invalid"></i></td>
+        </tr>
+      </tbody>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+module:
+
+  hugoVersion:
+    extended: true
+
+  imports:
+    - path: github.com/FortAwesome/Font-Awesome
+      mounts:
+        - source: js-packages/@fortawesome
+          target: assets/js/font-awesome
