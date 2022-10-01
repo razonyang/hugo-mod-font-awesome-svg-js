@@ -4,7 +4,7 @@
 {{- $opts := dict
   "sourceMap" $sourceMap
   "minify" hugo.IsProduction
-  "targetPath" "js/font-awesome.js"
+  "targetPath" "/js/font-awesome.js"
 }}
 {{/* Compile JS. */}}
 {{- $js = $js | js.Build $opts }}
