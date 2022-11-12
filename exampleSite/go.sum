@@ -1,2 +1,4 @@
 github.com/FortAwesome/Font-Awesome v0.0.0-20220831210243-d3a7818c253f h1:bvkUptSRPZBr3Kxuk+bnWCEmQ5MtEJX5fjezyV0bC3g=
 github.com/FortAwesome/Font-Awesome v0.0.0-20220831210243-d3a7818c253f/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
+github.com/razonyang/hugopress v0.1.1 h1:t21SsnRA8qlGsZK+jzxnpivtKOON33SdzADQtXgkfWM=
+github.com/razonyang/hugopress v0.1.1/go.mod h1:QliBWV3WwwkayNOm0aJbnn0d3j7IYT5Q7yCB0lygZDA=

@@ -2,3 +2,6 @@ title = "Hugo Font Awesome SVG JS Module"
 theme = [
     "github.com/razonyang/hugo-mod-font-awesome-svg-js"
 ]
+
+[[module.imports]]
+path = "github.com/razonyang/hugopress"
