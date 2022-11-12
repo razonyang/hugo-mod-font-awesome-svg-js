@@ -8,6 +8,7 @@ This Hugo module add supports for the [Font Awesome](https://fontawesome.com/) S
 - Customable by theme's developers.
 - Customable by users.
 - Compatible with Font Awesome `v5` and `v6`.
+- Supports [HugoPress](https://github.com/razonyang/hugopress).
 
 ## Installation
 
@@ -71,6 +72,8 @@ import { faTimeline } from 'js/font-awesome/free-solid-svg-icons/faTimeline';
 ```
 
 ### Load Script
+
+> You can skip this step if your theme supports [HugoPress](https://github.com/razonyang/hugopress).
 
 Then import the script into page, you can either use the `font-awesome/script` partial or the `font-awesome/script-resource` partial.
 The former renders a script tag, and the later return a script resource, which allow customizing the script tag and [concatting](https://gohugo.io/hugo-pipes/bundling/) with other scripts.
