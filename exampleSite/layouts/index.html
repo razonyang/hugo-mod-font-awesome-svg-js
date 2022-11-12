@@ -1,5 +1,6 @@
-<html>
+<html {{ partial "hugopress/document-attributes" . | safeHTMLAttr -}}>
   <head>
+    {{- partial "hugopress/head-begin.html" . }}
     <title>{{ .Title }}</title>
     <style>
       th,
@@ -16,9 +17,10 @@
         user-select: all;
       }
     </style>
-    {{- partial "font-awesome/script" . }}
+    {{- partial "hugopress/head-end.html" . }}
   </head>
-  <body>
+  <body {{ partial "hugopress/body-attributes" . | safeHTMLAttr -}}>
+    {{- partial "hugopress/body-begin.html" . }}
     <h1>
       <a href="https://github.com/razonyang/hugo-mod-font-awesome-svg-js"
         >{{ .Title }}</a
@@ -63,5 +65,6 @@
           <td><i class="fab fa-invalid"></i></td>
         </tr>
       </tbody>
+    {{- partial "hugopress/body-end.html" . }}
   </body>
 </html>
