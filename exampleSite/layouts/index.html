@@ -31,6 +31,7 @@
         <tr>
           <th>Code</th>
           <th>Preview</th>
+          <th>Source</th>
         </tr>
       </thead>
       <tbody>
@@ -39,30 +40,42 @@
             <code>{{ print "<i class=\"far fa-file\"></i>" | html }}</code>
           </td>
           <td><i class="far fa-file"></i></td>
+          <td><a href="https://github.com/razonyang/hugo-mod-font-awesome-svg-js/blob/main/exampleSite/config.toml">exampleSite</a></td>
         </tr>
         <tr>
           <td>
             <code>{{ print "<i class=\"fas fa-terminal\"></i>" | html }}</code>
           </td>
           <td><i class="fas fa-terminal"></i></td>
+          <td><a href="https://github.com/razonyang/hugo-mod-font-awesome-svg-js/blob/main/exampleSite/modules/bar/config.toml">bar module</a></td>
         </tr>
         <tr>
           <td>
             <code>{{ print "<i class=\"fas fa-timeline\"></i>" | html }}</code>
           </td>
           <td><i class="fas fa-timeline"></i></td>
+          <td><a href="https://github.com/razonyang/hugo-mod-font-awesome-svg-js/blob/main/exampleSite/modules/bar/config.toml">bar module</a></td>
         </tr>
         <tr>
           <td>
             <code>{{ print "<i class=\"fab fa-github\"></i>" | html }}</code>
           </td>
           <td><i class="fab fa-github"></i></td>
+          <td><a href="https://github.com/razonyang/hugo-mod-font-awesome-svg-js/blob/main/exampleSite/modules/foo/config.toml">foo module</a></td>
+        </tr>
+        <tr>
+          <td>
+            <code>{{ print "<i class=\"fab fa-yandex-international\"></i>" | html }}</code>
+          </td>
+          <td><i class="fab fa-yandex-international"></i></td>
+          <td><a href="https://github.com/razonyang/hugo-mod-font-awesome-svg-js/blob/main/exampleSite/modules/foo/config.toml">foo module</a></td>
         </tr>
         <tr>
           <td>
             <code>{{ print "<i class=\"fab fa-invalid\"></i>" | html }}</code>
           </td>
           <td><i class="fab fa-invalid"></i></td>
+          <td></td>
         </tr>
       </tbody>
     {{- partial "hugopress/body-end.html" . }}

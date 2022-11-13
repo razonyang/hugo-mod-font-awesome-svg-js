@@ -5,6 +5,7 @@ This Hugo module add supports for the [Font Awesome](https://fontawesome.com/) S
 ## Features
 
 - Add icons on demand, in order to reduce the size of icons set.
+- Customable by modules developers.
 - Customable by theme's developers.
 - Customable by users.
 - Compatible with Font Awesome `v5` and `v6`.
@@ -28,9 +29,32 @@ theme = [
 
 ### Adding Icons
 
-Firstly, we need to add some icons by creating the `assets/font-awesome/js/icons.js` file with following content.
+There are three ways to add icons, however, I only recommend using the first one, since it cross modules and themes, and the rest will be overridden by others which is unexpected.
 
-> The `assets/font-awesome/js/custom.js` is reserved for users, it has the same format as `icons.js`.
+#### Adding Icons via Configuration (recommended)
+
+Just put the icons you want to add inside `config.toml`, for example.
+
+```toml
+# Brands icons.
+[params.fontAwesome.icons.brands.google] # fab fa-google
+[params.fontAwesome.icons.brands.github] # fab fa-github
+[params.fontAwesome.icons.brands.yandex-international] # fab fa-yandex-international
+
+# Regular icons.
+[params.fontAwesome.icons.regular.file] # far fa-file
+
+# Solid icons.
+[params.fontAwesome.icons.solid.star] # fas fa-star
+[params.fontAwesome.icons.solid.terminal] # fas fa-terminal
+```
+
+> The type of icons is object/map, but there are no defined properties of icons so far.
+> Since the Hugo will override the array instead of appending the elements, that is why we use the object type instead.
+
+#### Adding Icons via icons.js (deprecated)
+
+Firstly, we need to add some icons by creating the `assets/font-awesome/js/icons.js` file with following content.
 
 ```js
 import { config } from 'js/font-awesome/fontawesome-svg-core';
@@ -70,6 +94,10 @@ import { faTimeline } from 'js/font-awesome/free-solid-svg-icons';
 // Use following instead.
 import { faTimeline } from 'js/font-awesome/free-solid-svg-icons/faTimeline';
 ```
+
+#### Adding Icons custom.js (deprecated)
+
+The `assets/font-awesome/js/custom.js` is reserved for users, it has the same format as `icons.js`.
 
 ### Load Script
 

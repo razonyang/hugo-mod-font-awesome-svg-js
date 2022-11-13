@@ -1,5 +1,12 @@
+{{- $js := slice }}
+{{/* Load icons from modules. */}}
+{{- with .Site.Params.fontAwesome.icons }}
+  {{- $iconsTemplate := resources.Get "font-awesome/js/modules.template.js" }}
+  {{- $icons := $iconsTemplate | resources.ExecuteAsTemplate "font-awesome/js/modules.js" . }}
+  {{- $js = $js | append $icons }}
+{{- end }}
 {{/* Load main JavaScript. */}}
-{{- $js := resources.Get "font-awesome/js/index.js" }}
+{{- $js = $js | append (resources.Get "font-awesome/js/index.js") }}
 {{- $sourceMap := cond hugo.IsProduction "" "inline" }}
 {{- $opts := dict
   "sourceMap" $sourceMap
@@ -7,7 +14,7 @@
   "targetPath" "/js/font-awesome.js"
 }}
 {{/* Compile JS. */}}
-{{- $js = $js | js.Build $opts }}
+{{- $js = $js | resources.Concat "js/font-awesome.js" | js.Build $opts }}
 {{- if hugo.IsProduction }}
   {{- $js = $js | fingerprint }}
 {{- end }}
