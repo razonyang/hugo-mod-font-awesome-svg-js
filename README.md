@@ -5,9 +5,7 @@ This Hugo module add supports for the [Font Awesome](https://fontawesome.com/) S
 ## Features
 
 - Add icons on demand, in order to reduce the size of icons set.
-- Customable by modules developers.
-- Customable by theme's developers.
-- Customable by users.
+- Customable by modules, themes developers and end users.
 - Compatible with Font Awesome `v5` and `v6`.
 - Supports [HugoPress](https://github.com/razonyang/hugopress).
 
