@@ -5,3 +5,9 @@ theme = [
 
 [[module.imports]]
 path = "github.com/razonyang/hugopress"
+[[module.imports]]
+path = "github.com/razonyang/hugo-mod-font-awesome-svg-js/exampleSite/modules/foo"
+[[module.imports]]
+path = "github.com/razonyang/hugo-mod-font-awesome-svg-js/exampleSite/modules/bar"
+
+[params.fontAwesome.icons.regular.file]

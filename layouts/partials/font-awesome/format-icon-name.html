@@ -1,0 +1,5 @@
+{{- $s := title . }}
+{{- range findRE `-([a-z0-9])` . }}
+  {{- $s = replace $s . (title .) }}
+{{- end }}
+{{- return replace $s "-" "" }}

@@ -9,3 +9,9 @@ source = "js-packages/@fortawesome"
 target = "assets/js/font-awesome"
 
 [params.hugopress.modules.font-awesome.hooks.body-end]
+
+# [params.fontAwesome.icons.brands.google]
+
+# [params.fontAwesome.icons.regular.file]
+
+# [params.fontAwesome.icons.solid.star]
